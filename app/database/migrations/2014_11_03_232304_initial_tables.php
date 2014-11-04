@@ -39,6 +39,7 @@ class InitialTables extends Migration {
 			$t->string('college')->nullable();
 			$t->string('career')->nullable();
 			$t->string('organization')->nullable();
+			$t->string('remember_token')->nullable();
 			$t->timestamps();
 		});
 		Schema::create('communities', function($t) {
