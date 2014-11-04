@@ -19,3 +19,9 @@ Route::get('/', function()
 Route::get('/login', ['uses'=>'AuthController@login']);
 Route::post('/login', ['uses'=>'AuthController@doLogin']);
 Route::post('/logout', ['uses'=>'AuthController@doLogout']);
+
+// Everything inside this are routes that require authentication
+// Otherwise it goes to login screen
+Route::group(array('before' => 'auth'), function(){
+
+});
