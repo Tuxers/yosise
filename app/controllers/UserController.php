@@ -35,8 +35,24 @@ class UserController extends BaseController {
 
         $user = new User(Input::all());
         $user->password = Hash::make(Input::get('password'));
+
+        if($user->ocupation === 'uni' || $user->ocupation === 'pro') {
+            $user->college = College::find(Input::get('college'))->name;
+            $user->career = Area::find(Input::get('career'))->name;
+        }
         $user->save();
 
         return Redirect::to('login');
+    }
+
+    public function profile() {
+        $user = Auth::user();
+        $questions = $user->questions()->get();
+        $answers = $user->answers()->with('question')->get();
+
+        return View::make('user.profile')
+            ->with('model', $user)
+            ->with('questions', $questions)
+            ->with('answers', $answers);
     }
 }
