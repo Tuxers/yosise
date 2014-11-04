@@ -1,0 +1,45 @@
+.community-banner {
+}
+.community-action-buttons {
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+}
+.question-item {
+    padding: 25px 35px 25px 35px;
+}
+.question-item-asker {
+    /*float: left;*/
+}
+.question-item-date {
+    /*float: left;*/
+}
+.question-item-content {
+    /*float: left;*/
+}
+.question-item-vote {
+    text-align: center;
+}
+.question-item-share-buttons {
+    float: left;
+}
+.question-item-answer-button {
+    text-align: right;
+}
+.social-icon-little {
+    width: 24px;
+    margin-top: 4px;
+}
+.social-icons-share-text {
+    float: left;
+    width: 70px;
+}
+.vote-count {
+    margin-top: 0;
+    margin-bottom: -10px;
+}
+.community-member-icon {
+    width: 45px;
+    float: left;
+    padding: 2px;
+}
