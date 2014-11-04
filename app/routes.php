@@ -11,6 +11,10 @@
 |
 */
 
+foreach(glob(app_path().'/routes/*.php') as $filename) {
+    include($filename);
+}
+
 Route::get('/', function()
 {
 	return View::make('home.index');
@@ -19,9 +23,3 @@ Route::get('/', function()
 Route::get('/login', ['uses'=>'AuthController@login']);
 Route::post('/login', ['uses'=>'AuthController@doLogin']);
 Route::post('/logout', ['uses'=>'AuthController@doLogout']);
-
-// Everything inside this are routes that require authentication
-// Otherwise it goes to login screen
-Route::group(array('before' => 'auth'), function(){
-
-});
