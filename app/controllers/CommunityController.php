@@ -18,13 +18,32 @@ class CommunityController extends BaseController {
     public function follow($id) {
         $user = Auth::user();
         $community = Community::findOrFail($id);
-        $community->followers()->attach($user->id);
+        $community->followers()->sync([$user->id], false);
         $community->members = $community->followers()->count();
         $community->save();
 
         return Response::json([
             'members'=>$community->members
         ], 200);
+    }
+
+    public function unfollow($id) {
+        $user = Auth::user();
+        $community = Community::findOrFail($id);
+        $community->followers()->detach($user->id);
+        $community->members = $community->followers()->count();
+        $community->save();
+
+        return Response::json([
+            'members'=>$community->members
+        ], 200);
+    }
+
+    public function members($id) {
+        $community = Community::findOrFail($id);
+        $members = $community->followers()->get();
+
+        return Response::json($members, 200);
     }
 
     public function questions($id) {
