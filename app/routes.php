@@ -13,5 +13,8 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('home.index');
 });
+
+Route::get('/login', ['uses'=>'AuthController@login']);
+Route::post('/login', ['uses'=>'AuthController@doLogin']);
