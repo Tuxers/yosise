@@ -18,3 +18,4 @@ Route::get('/', function()
 
 Route::get('/login', ['uses'=>'AuthController@login']);
 Route::post('/login', ['uses'=>'AuthController@doLogin']);
+Route::post('/logout', ['uses'=>'AuthController@doLogout']);
