@@ -24,6 +24,7 @@ class GeneralSeeder extends Seeder {
 
         $users = [
             [
+                'id'=>1,
                 'username'=>'aturing',
                 'name'=>'Alan Turing',
                 'email'=>'aturing@gmail.com',
@@ -36,6 +37,7 @@ class GeneralSeeder extends Seeder {
                 'organization'=>'USA FFAA'
             ],
             [
+                'id'=>2,
                 'username'=>'ltorrico',
                 'name'=>'Lucio Torrico',
                 'email'=>'ltorrico@gmail.com',
@@ -48,6 +50,7 @@ class GeneralSeeder extends Seeder {
                 'organization'=>'UMSA'
             ],
             [
+                'id'=>3,
                 'username'=>'dknuth',
                 'name'=>'Donald Knuth',
                 'email'=>'dknuth@gmail.com',
@@ -60,6 +63,7 @@ class GeneralSeeder extends Seeder {
                 'organization'=>'Universidad de Stanford'
             ],
             [
+                'id'=>4,
                 'username'=>'aswartz',
                 'name'=>'Aron Swartz',
                 'email'=>'aswartz@gmail.com',
@@ -72,6 +76,7 @@ class GeneralSeeder extends Seeder {
                 'organization'=>null
             ],
             [
+                'id'=>5,
                 'username'=>'mariobros',
                 'name'=>'Mario Mario',
                 'email'=>'mbros@gmail.com',
@@ -84,6 +89,7 @@ class GeneralSeeder extends Seeder {
                 'organization'=>null
             ],
             [
+                'id'=>6,
                 'username'=>'luigi',
                 'name'=>'Luigi Mario',
                 'email'=>'lmario@gmail.com',
@@ -96,6 +102,7 @@ class GeneralSeeder extends Seeder {
                 'organization'=>null
             ],
             [
+                'id'=>7,
                 'username'=>'jperez',
                 'name'=>'Juan Perez',
                 'email'=>'jperez@gmail.com',
