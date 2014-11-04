@@ -5,5 +5,5 @@
 Route::get('register', ['uses'=>'UserController@register']);
 Route::post('register', ['uses'=>'UserController@doRegister']);
 Route::group(array('before' => 'auth'), function(){
-    Route::get('profile', ['uses'=>'UserController@profile']);
+    Route::get('profile/{id?}', ['uses'=>'UserController@profile']);
 });

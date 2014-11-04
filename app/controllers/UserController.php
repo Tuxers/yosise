@@ -45,8 +45,12 @@ class UserController extends BaseController {
         return Redirect::to('login');
     }
 
-    public function profile() {
-        $user = Auth::user();
+    public function profile($id=null) {
+        if ($id) {
+            $user = User::findOrFail($id);
+        } else {
+            $user = Auth::user();
+        }
         $questions = $user->questions()->get();
         $answers = $user->answers()->with('question')->get();
 
