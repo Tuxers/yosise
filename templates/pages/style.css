@@ -55,7 +55,7 @@
 .question-answer-textbox {
     padding: 25px;
 }
-.answer-textbox {
+.answer-textbox, .question-textbox {
     resize: vertical;
 }
 .question-followers, .question-similar-questions {
