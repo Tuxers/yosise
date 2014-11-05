@@ -62,9 +62,10 @@
     margin-bottom: 50px;
 }
 
-.answer-container{
+.question-answer-container{
     min-height: 20px;
     padding: 20px;
+    padding-bottom: 5px;
     margin-bottom: 10px;
     background-color: #fafafa;
     border: 1px solid #e7e7e7;
