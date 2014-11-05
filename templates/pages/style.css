@@ -61,3 +61,16 @@
 .question-followers, .question-similar-questions {
     margin-bottom: 50px;
 }
+
+.answer-container{
+    min-height: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+    border: 1px solid #e7e7e7;
+}
+
+.interested-tags{
+    padding-left: 30px;
+    padding-right: 30px;
+}
