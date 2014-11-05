@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Comunidad</title>
+    <title>Inicio de Sesi&oacute;n</title>
     <link type="text/css" rel="stylesheet" href="../../bootswatch/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../style.css">
+    <link type="text/css" rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
     <script type="text/javascript" src="../../jquery/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../../bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
@@ -18,27 +20,39 @@
         </button>
         <a class="navbar-brand" href="javascript:(0)">YoSiSe</a>
     </div>
-    <div class="navbar-collapse collapse navbar-responsive-collapse">
-        <form class="navbar-form navbar-left">
-            <input type="text" class="form-control col-lg-8" placeholder="Search">
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Mis Comunidades</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mario Bross<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
 </div>
 <!-- End Header -->
-
+<!-- Begin Body -->
+<div class="login-container">
+    <div class="well">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Iniciar Sesi&oacute;n</legend>
+                <div class="form-group">
+                    <label for="inputUsername" class="col-lg-2 control-label">Usuario</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputUsername" placeholder="Usuario">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Contrase&ncaron;a</label>
+                    <div class="col-lg-10">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Contrase&ncaron;a">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <p><a href="#" class="btn btn-primary login">Entrar</a></p>
+                        <p><a href="#" class="btn btn-info facebook">Facebook</a></p>
+                        <p><a href="#" class="btn btn-danger google-plus">Google +</a></p>
+                        <p><a href="#" class="btn btn-success">Registrarse</a></p>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<!-- End Body -->
 </body>
 
 </html>
