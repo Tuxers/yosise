@@ -14,7 +14,7 @@
 				</h1>
 				<h4 class="question-item-asker">
 					<small>
-						Preguntado por <a href="javascript:(0)">{{$user->name}}</a> el {{$question->created_at}}.
+						Preguntado por <a href="/profile/{{$user->id}}">{{$user->name}}</a> el {{$question->created_at}}.
 					</small>
 				</h4>
 				<p class="question-item-description">
@@ -51,7 +51,7 @@
 					<div class="answer-item-content col-xs-10">
 						<img class="answer-member-icon" src="{{asset('img/members/sergey.png')}}">
 						<h4 class="answer-item-title">
-							<a href="javascript:void(0)">{{$answer->user->name}}</a><i class="fa fa-{{HTML::ocupationIcon($answer->user->ocupation)}}"></i>
+							<a href="/profile/{{$answer->user->id}}">{{$answer->user->name}}</a><i class="fa fa-{{HTML::ocupationIcon($answer->user->ocupation)}}"></i>
 						</h4>
 						<h4><small>({{$answer->user->ocupation}})</small></h4>
 						<p class="question-item-description">
