@@ -9,7 +9,7 @@
 	<div class="row">
 		<div class="col-md-12 question-page">
 			<div class="question-item-content col-xs-10">
-				<h1 class="question-item-title"><i class="fa fa-graduation-cap"></i>
+				<h1 class="question-item-title"><i class="fa fa-{{HTML::ocupationIcon($question->user->ocupation)}}"></i>
 					{{$question->title}}
 				</h1>
 				<h4 class="question-item-asker">
@@ -49,9 +49,9 @@
 			@foreach($answers as $answer)
 				<div class="answer-item row">
 					<div class="answer-item-content col-xs-10">
-						<img class="answer-member-icon" src="asset/members/verok.png">
+						<img class="answer-member-icon" src="{{asset('img/members/sergey.png')}}">
 						<h4 class="answer-item-title">
-							<a href="javascript:void(0)">{{$answer->user->name}}</a><i class="fa fa-briefcase"></i>
+							<a href="javascript:void(0)">{{$answer->user->name}}</a><i class="fa fa-{{HTML::ocupationIcon($answer->user->ocupation)}}"></i>
 						</h4>
 						<h4><small>({{$answer->user->ocupation}})</small></h4>
 						<p class="question-item-description">

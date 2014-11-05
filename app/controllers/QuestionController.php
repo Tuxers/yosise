@@ -4,6 +4,9 @@ class QuestionController extends BaseController {
     public function index($id=null) {
     	if ($id) {
     		$question = Question::findOrFail($id);
+    	} else {
+    		// Retrieve the first question
+    		$question = Question::findOrFail(1);
     	}
     	$user = $question->user;
     	$answers = $question->answers;
