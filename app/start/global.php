@@ -79,3 +79,16 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Get icon for a given ocupation.
+|--------------------------------------------------------------------------
+|
+*/
+HTML::macro('ocupationIcon', function($ocupation) {
+	if ($ocupation == "stu") return "book";
+	if ($ocupation == "uni") return "graduation-cap";
+	if ($ocupation == "pro") return "briefcase";
+	return "";
+});
