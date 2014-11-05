@@ -38,6 +38,15 @@ class AnswerSeeder extends Seeder {
                 'question_id'=>4,
                 'user_id'=>1
             ],
+            [
+                'id'=>5,
+                'content'=>'Se trata de computadoras.',
+                'is_best'=>false,
+                'up_votes'=>0,
+                'down_votes'=>0,
+                'question_id'=>1,
+                'user_id'=>3
+            ],
         ];
         DB::table('answers')->insert($answers);
     }

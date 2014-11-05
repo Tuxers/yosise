@@ -5,22 +5,13 @@
     right: 30px;
     bottom: 15px;
 }
-.question-item {
+.question-item, .answer-item, .answer-textbox{
     padding: 25px 35px 25px 35px;
 }
-.question-item-asker {
-    /*float: left;*/
-}
-.question-item-date {
-    /*float: left;*/
-}
-.question-item-content {
-    /*float: left;*/
-}
-.question-item-vote {
+.answer-item-vote, .question-item-vote {
     text-align: center;
 }
-.question-item-share-buttons {
+.question-item-share-buttons .answer-item-share-buttons {
     float: left;
 }
 .question-item-answer-button {
@@ -42,4 +33,31 @@
     width: 45px;
     float: left;
     padding: 2px;
+}
+.question-page .social-icon-little {
+    width: 30px;
+}
+.answer-member-icon {
+    width: 65px;
+    float: left;
+    padding: 7px;
+}
+.question-action-buttons {
+    text-align: right;
+}
+.question-send-answer {
+    text-align: right;
+    padding-right: 30px;
+}
+.question-item-content {
+    margin-bottom: 50px;
+}
+.question-answer-textbox {
+    padding: 25px;
+}
+.answer-textbox, .question-textbox {
+    resize: vertical;
+}
+.question-followers, .question-similar-questions {
+    margin-bottom: 50px;
 }

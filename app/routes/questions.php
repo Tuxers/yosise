@@ -2,5 +2,5 @@
 // Everything inside this are routes that require authentication
 // Otherwise it goes to login screen
 Route::group(array('before' => 'auth'), function(){
-	Route::get('/question', ['uses'=>'QuestionController@index']);
+	Route::get('/question/{id?}', ['uses'=>'QuestionController@index']);
 });
