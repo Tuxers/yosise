@@ -3,4 +3,5 @@
 // Otherwise it goes to login screen
 Route::group(array('before' => 'auth'), function(){
 	Route::get('/question/{id?}', ['uses'=>'QuestionController@index']);
+	Route::post('/question', ['uses'=>'QuestionController@create']);
 });
