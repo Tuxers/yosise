@@ -37,7 +37,7 @@
       $('#member-list').html('');
       var tpl = "";
       for(var i = 0; i < res.length; ++i) {
-        var tplData = {followerId: res[i].id, followerName: res[i].name};
+        var tplData = {followerId: res[i].id, followerName: res[i].name, pictureUrl: res[i].picture_url};
         tpl += memberTemplate(tplData);
       }
       $('#member-list').html(tpl);

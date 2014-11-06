@@ -49,7 +49,7 @@
     @foreach($followers as $follower)
       <a href="/profile/{{$follower->id}}">
       <img class="community-member-icon" title="{{$follower->name}}"
-        src="/img/members/jhtan.png">
+        src="/img/members/{{$follower->picture_url}}">
       </a>
     @endforeach
     </div>
@@ -101,7 +101,7 @@
 <script type="application/template" id="member-tpl">
   <a href="/profile/<%= followerId %>">
     <img class="community-member-icon" title="<%= followerName %>"
-      src="/img/members/jhtan.png">
+      src="/img/members/<%= pictureUrl %>">
   </a>
 </script>
 <script type="application/template" id="question-tpl">

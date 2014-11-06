@@ -51,12 +51,13 @@
 			@foreach($answers as $answer)
 			<div class="answer-item row">
 				<div class="answer-item-content col-xs-10">
-					<img class="answer-member-icon" src="{{asset('img/members/sergey.png')}}">
+					<img class="answer-member-icon" src="/img/members/{{$answer->user->picture_url}}">
+
 					<h4 class="answer-item-title">
 						<a href="/profile/{{$answer->user->id}}">{{$answer->user->name}}</a>
 						<i class="fa fa-{{HTML::ocupationIcon($answer->user->ocupation)}}"></i>
 					</h4>
-					<h4><small>({{$answer->user->ocupation}})</small></h4>
+					<h4><small>({{$answer->user->bio}})</small></h4>
 					<p class="question-item-description">
 						{{$answer->content}}
 					</p>
@@ -115,7 +116,7 @@
 <script type="application/template" id="answer-tpl">
 	<div class="answer-item row">
 		<div class="answer-item-content col-xs-10">
-			<img class="answer-member-icon" src="/img/members/sergey.png">
+			<img class="answer-member-icon" src="/img/members/<%= pictureUrl %>">
 			<h4 class="answer-item-title">
 				<a href="/profile/<%= userId %>"><%= userName %></a>
 				<i class="fa fa-<%= ocupationIcon %>"></i>

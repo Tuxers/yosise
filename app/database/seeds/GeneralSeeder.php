@@ -25,55 +25,59 @@ class GeneralSeeder extends Seeder {
         $users = [
             [
                 'id'=>1,
-                'username'=>'aturing',
-                'name'=>'Alan Turing',
-                'email'=>'aturing@gmail.com',
+                'username'=>'jhtan',
+                'name'=>'Jhonatan Castro',
+                'email'=>'jhtan@gmail.com',
                 'password'=>Hash::make('none'),
-                'bio'=>'Descifre maquina Enigma, Ejercito de USA',
+                'bio'=>'Programacion Competitiva',
                 'ocupation'=>'pro',
                 'school'=>null,
-                'college'=>'Universidad de Cambridge',
+                'college'=>'UMSA',
                 'career'=>'Informatica y Sistemas',
-                'organization'=>'USA FFAA'
+                'organization'=>'USA FFAA',
+                'picture_url' => 'jhtan.png'
             ],
             [
                 'id'=>2,
-                'username'=>'ltorrico',
-                'name'=>'Lucio Torrico',
-                'email'=>'ltorrico@gmail.com',
+                'username'=>'veroka',
+                'name'=>'Veronica Arquipa',
+                'email'=>'veroka@gmail.com',
                 'password'=>Hash::make('none'),
                 'bio'=>'Algoritmos, matematicas',
                 'ocupation'=>'pro',
                 'school'=>null,
                 'college'=>'UMSA',
                 'career'=>'Informatica y Sistemas',
-                'organization'=>'UMSA'
+                'organization'=>'UMSA',
+                'picture_url' => 'verok.png'
             ],
             [
                 'id'=>3,
-                'username'=>'dknuth',
-                'name'=>'Donald Knuth',
-                'email'=>'dknuth@gmail.com',
+                'username'=>'arnold',
+                'name'=>'Arnold Paye',
+                'email'=>'arnoldpaye@gmail.com',
                 'password'=>Hash::make('none'),
                 'bio'=>'Algoritmos, matematicas, Latex',
                 'ocupation'=>'pro',
                 'school'=>null,
                 'college'=>'Universidad de Stanford',
                 'career'=>'Informatica y Sistemas',
-                'organization'=>'Universidad de Stanford'
+                'organization'=>'Universidad de Stanford',
+                'picture_url' => 'arnex.png'
             ],
             [
                 'id'=>4,
-                'username'=>'aswartz',
-                'name'=>'Aron Swartz',
-                'email'=>'aswartz@gmail.com',
+                'username'=>'neoncyber',
+                'name'=>'Sergio Guillen',
+                'email'=>'neoncyber@gmail.com',
                 'password'=>Hash::make('none'),
-                'bio'=>'Co-fundador Reddit',
+                'bio'=>'Desarrollo de software',
                 'ocupation'=>'uni',
                 'school'=>null,
                 'college'=>'MIT',
                 'career'=>'Informatica',
-                'organization'=>null
+                'organization'=>null,
+                'picture_url' => 'sergey.png'
             ],
             [
                 'id'=>5,
@@ -86,7 +90,8 @@ class GeneralSeeder extends Seeder {
                 'school'=>null,
                 'college'=>'UMSA',
                 'career'=>'Informatica',
-                'organization'=>null
+                'organization'=>null,
+                'picture_url' => 'mario.png'
             ],
             [
                 'id'=>6,
@@ -99,7 +104,8 @@ class GeneralSeeder extends Seeder {
                 'school'=>null,
                 'college'=>'UMSA',
                 'career'=>'Informatica',
-                'organization'=>null
+                'organization'=>null,
+                'picture_url' => 'luigi.png'
             ],
             [
                 'id'=>7,
@@ -112,7 +118,8 @@ class GeneralSeeder extends Seeder {
                 'school'=>'Simon Bolivar',
                 'college'=>null,
                 'career'=>null,
-                'organization'=>null
+                'organization'=>null,
+                'picture_url' => 'juan.png'
             ],
         ];
         DB::table('users')->insert($users);
@@ -131,12 +138,20 @@ class GeneralSeeder extends Seeder {
                 'id'=>2,
                 'name'=>'Informatica - UMSA',
                 'description'=>'Informatica - UMSA',
-                'members'=>0,
+                'members'=>3,
                 'college_id'=>1,
                 'area_id'=>1,
                 'father_id'=>1,
             ],
         ];
         DB::table('communities')->insert($communities);
+
+        $follows = [
+            ['user_id'=>1, 'community_id'=>2],
+            ['user_id'=>3, 'community_id'=>2],
+            ['user_id'=>4, 'community_id'=>2],
+            ['user_id'=>5, 'community_id'=>2],
+        ];
+        DB::table('follows')->insert($follows);
     }
 }

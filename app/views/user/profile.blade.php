@@ -10,7 +10,7 @@
   <div class="col-sm-12">
     <div class="col-xs-12 col-sm-4 text-center">
       <figure>
-        <img src="../../images/default-user-icon-profile.png" alt="" class="img-circle img-responsive">
+        <img width="200" height="200" src="/img/members/{{$model->picture_url}}" alt="" class="img-circle img-responsive">
       </figure>
     </div>
     <div class="col-xs-12 col-sm-8">
@@ -68,7 +68,7 @@
 
     <div class="well row">
       <div class="answer-item-content col-xs-12">
-        <img class="answer-member-icon" src="images/members/verok.png">
+        <img class="answer-member-icon" src="/img/members/{{$model->picture_url}}">
         <h4 class="answer-item-title">
           <a href="/profile/{{$model->id}}">
             {{{$model->name}}}

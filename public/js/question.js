@@ -25,7 +25,8 @@
           ocupationIcon: icon,
           userBio: res.user.bio,
           answerContent: res.content,
-          votes: res.up_votes - res.down_votes
+          votes: res.up_votes - res.down_votes,
+          pictureUrl: res.user.picture_url
         };
         var tpl = answerTemplate(tplData);
         $('#answers-container').append(tpl);
