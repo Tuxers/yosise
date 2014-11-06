@@ -15,4 +15,25 @@ class QuestionController extends BaseController {
         	->with('user', $user)
         	->with('answers', $answers);
     }
+
+    public function create() {
+        $rules = [
+            'title'=>'required',
+            'description'=>'required'
+        ];
+        $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) {
+            return Redirect::to('/community/' . Input::get('communityId'))
+                ->with('error', 'Algunos datos son incorrectos');
+        }
+        $question = new Question();
+        $question->title = Input::get('title');
+        $question->description = Input::get('description');
+        $question->community_id = Input::get('communityId');
+        $question->user_id = Auth::user()->id;
+        $question->save();
+
+        return Redirect::to('/community/' . Input::get('communityId'));
+    }
 }

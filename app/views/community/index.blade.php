@@ -26,7 +26,9 @@
             <a  id="follow" class="btn btn-primary follow-btn">Seguir</a>
             <a  style="display: none" id="unfollow" class="btn btn-primary follow-btn">Siguiendo</a>
           @endif
-        <a href="#" class="btn btn-success ask-btn">Preguntar</a>
+        <button type="button" class="btn btn-success ask-btn" data-toggle="modal" data-target="#questionModal">
+          Preguntar
+        </button>
       </div>
     </div>
   </div>
@@ -53,6 +55,45 @@
     </div>
   </div>
   <!-- End Community Left column -->
+
+  <!-- Begin Question Form -->
+  <div class="modal fade" id="questionModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">Hacer Pregunta</h4>
+        </div>
+        {{Form::open(['url'=>'/question', 'method'=>'post'])}}
+        <div class="modal-body">
+          <input type="hidden" name="communityId" value="{{$model->id}}">
+          <div class="form-group">
+            <label for="title" class="col-lg-3 control-label">T&iacute;tulo</label>
+            <div class="col-lg-9">
+              <input class="form-control" type="text" name="title" placeholder="Pregunta" autocomplete="off"><br>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="description" class="col-lg-3 control-label">Descripci&oacute;n</label>
+            <div class="col-lg-9">
+              <textarea class="form-control" type="text" name="description" autocomplete="off">
+              </textarea>
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-success ask-btn" value="Preguntar">
+        </div>
+        {{Form::close()}}
+      </div>
+    </div>
+  </div>
+  <!-- End Question Form -->
 </div>
 @stop
 
