@@ -1,6 +1,6 @@
 <?php
 class QuestionController extends BaseController {
-    
+
     public function index($id=null) {
     	if ($id) {
     		$question = Question::findOrFail($id);
@@ -35,5 +35,20 @@ class QuestionController extends BaseController {
         $question->save();
 
         return Redirect::to('/community/' . Input::get('communityId'));
+    }
+
+    public function doAnswer($id) {
+        $answer = new Answer();
+        $answer->content = Input::get('content');
+        $answer->user_id = Auth::id();
+        $answer->up_votes = 0;
+        $answer->down_votes = 0;
+        $answer->is_best = false;
+        $answer->question_id = $id;
+        $answer->save();
+
+        $answer = Answer::where('id', '=', $answer->id)->with('user')->first();
+
+        return Response::json($answer, 200);
     }
 }

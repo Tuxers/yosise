@@ -4,4 +4,6 @@
 Route::group(array('before' => 'auth'), function(){
 	Route::get('/question/{id?}', ['uses'=>'QuestionController@index']);
 	Route::post('/question', ['uses'=>'QuestionController@create']);
+
+    Route::post('/question/{id}/answer', ['uses'=>'QuestionController@doAnswer']);
 });

@@ -124,7 +124,7 @@
         <img class="social-icon-little" src="/img/social-twitter.png">
         <img class="social-icon-little" src="/img/social-facebook.png">
       </div>
-      <div class="question-item-answer-button col-xs-4"><a href="/question/<%= questionId %>" class="btn btn-primary btn-sm">Responder</a></div>
+      <div class="question-item-answer-button col-xs-4"><a href="/question/<%= questionId %>#question-answer-textbox" class="btn btn-primary btn-sm">Responder</a></div>
     </div>
   </div>
   <div class="question-item-vote col-xs-2">

@@ -48,7 +48,7 @@ class CommunityController extends BaseController {
 
     public function questions($id) {
         $community = Community::findOrFail($id);
-        $questions = $community->questions()->with('user')->get();
+        $questions = $community->questions()->with('user')->orderBy('created_at', 'desc')->get();
         // print_r(DB::getQueryLog());
         // $res = Community::hydrateRaw('select * from communities where id >= :id', ['id'=>1]);
         // print_r(count($res));
