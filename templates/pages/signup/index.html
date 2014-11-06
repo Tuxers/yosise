@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Comunidad</title>
+    <title>Registrar Usuario</title>
     <link type="text/css" rel="stylesheet" href="../../bootswatch/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../style.css">
+    <link type="text/css" rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
     <script type="text/javascript" src="../../jquery/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../../bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
@@ -24,21 +26,116 @@
         </form>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Mis Comunidades</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mario Bross<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </li>
         </ul>
     </div>
 </div>
 <!-- End Header -->
-
+<!-- Begin Body -->
+<div class="login-container">
+    <div class="well">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Registrar Usuario</legend>
+                <div class="form-group">
+                    <label for="inputUsername" class="col-lg-3 control-label">Usuario</label>
+                    <div class="col-lg-9">
+                        <input type="text" class="form-control" id="inputUsername" placeholder="Nombre de Usuario">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputName" class="col-lg-3 control-label">Nombre</label>
+                    <div class="col-lg-9">
+                        <input type="text" class="form-control" id="inputName" placeholder="Nombres y Apellidos">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-3 control-label">Correo</label>
+                    <div class="col-lg-9">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Correo electr&oacute;nico">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-lg-3 control-label">Contrase&ncaron;a</label>
+                    <div class="col-lg-9">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Contrase&ncaron;a">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputBio" class="col-lg-3 control-label">Biograf&iacute;a</label>
+                    <div class="col-lg-9">
+                        <input type="text" class="form-control" id="inputBio" placeholder="Biograf&iacute;a">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Ocupac&iacute;on</label>
+                    <br>
+                    <div class="col-lg-9">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsOcupation" id="optionsRadios1" value="Colegial" checked="">
+                                Colegial
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsOcupation" id="optionsRadios2" value="Universitario">
+                                Universitario
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsOcupation" id="optionsRadios3" value="Profesional">
+                                Profesional
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSchool" class="col-lg-3 control-label">Colegio</label>
+                    <div class="col-lg-9">
+                        <input type="text" class="form-control" id="inputSchool" placeholder="Colegio">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputCollege" class="col-lg-3 control-label">Universidad</label>
+                    <div class="col-lg-9">
+                        <select class="form-control" id="inputCollege">
+                            <option>UMSA</option>
+                            <option>UMMS</option>
+                            <option>UTO</option>
+                            <option>UNIVALLE&iacute;mica</option>
+                            <option>USABOL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputCarrer" class="col-lg-3 control-label">Carrera</label>
+                    <div class="col-lg-9">
+                        <select class="form-control" id="inputCarrer">
+                            <option>Inform&aacute;tica</option>
+                            <option>Matem&aacute;ticas</option>
+                            <option>F&iacute;sica</option>
+                            <option>Qu&iacute;mica</option>
+                            <option>Gelog&iacute;a</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputOrganization" class="col-lg-3 control-label">Profes&iacute;on</label>
+                    <div class="col-lg-9">
+                        <input type="text" class="form-control" id="inputOrganization" placeholder="Profes&iacute;on">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-3 col-lg-offset-9">
+                        <p><a href="#" class="btn btn-success">Registrarse</a></p>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<!-- End Body -->
 </body>
 
 </html>
