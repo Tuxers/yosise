@@ -20,6 +20,11 @@ Route::get('/', function()
 	return View::make('home.index');
 });
 
+Route::get('/welcome', function()
+{
+	return View::make('home.welcome');
+});
+
 Route::get('/login', ['uses'=>'AuthController@login']);
 Route::post('/login', ['uses'=>'AuthController@doLogin']);
 Route::post('/logout', ['uses'=>'AuthController@doLogout']);
