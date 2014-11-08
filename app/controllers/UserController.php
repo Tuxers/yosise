@@ -30,17 +30,23 @@ class UserController extends BaseController {
 
         if ($validator->fails()) {
             return Redirect::to('register')
-                ->with('error', 'Algunos datos son incorrectos');
+                ->withErrors($validator);
         }
 
         $user = new User(Input::all());
         $user->password = Hash::make(Input::get('password'));
+        $user->picture_url = "default.png";
 
         if($user->ocupation === 'uni' || $user->ocupation === 'pro') {
             $user->college = College::find(Input::get('college'))->name;
             $user->career = Area::find(Input::get('career'))->name;
         }
         $user->save();
+        $user->communities()->sync([2], false); // associate directly to UMSA INFO
+
+        $community = Community::find(2);
+        $community->members = $community->members + 1;
+        $community->save();
 
         return Redirect::to('login');
     }
