@@ -17,7 +17,11 @@ foreach(glob(app_path().'/routes/*.php') as $filename) {
 
 Route::get('/', function()
 {
-	return View::make('home.index');
+    if (!Auth::check()) {
+	   return View::make('home.welcome');
+    } else {
+        return Redirect::to('profile');
+    }
 });
 
 Route::get('/welcome', function()
